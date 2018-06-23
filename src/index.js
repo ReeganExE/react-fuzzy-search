@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import Fuse from 'fuse.js';
 
 const styles = {
@@ -206,9 +205,9 @@ export default class FuzzySearch extends Component {
   }
 
   render() {
-    const { className, width, resultsTemplate, placeholder, autoFocus } = this.props;
+    const { className: mainClass, width, resultsTemplate, placeholder, autoFocus } = this.props;
 
-    const mainClass = classNames('react-fuzzy-search', className);
+    // const mainClass = classNames('react-fuzzy-search', className);
 
     return (
       <div className={mainClass} style={{ width }} onKeyDown={this.handleKeyDown}>
